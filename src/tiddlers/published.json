@@ -1,5 +1,13 @@
 [
 		{
+				"title" : "Run Admob Rewarded Ads",
+				"published_date" : "20231026230750972",
+				"slug" : "run-admob-rewarded-ads",
+				"text" : "<p>Add this code in your JavaScript:</p><pre><code>Andro.reward()</code></pre>",
+				"ringkasan" : "",
+				"kategori" : "",
+				"gambar" : ""
+			},{
 				"title" : "Set Wallpaper",
 				"published_date" : "20231011062837277",
 				"slug" : "set-wallpaper",

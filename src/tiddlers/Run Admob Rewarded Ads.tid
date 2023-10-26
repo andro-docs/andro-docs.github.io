@@ -1,0 +1,12 @@
+created: 20231026150645875
+modified: 20231026150750972
+published_date: 20231026230750972
+tags: Published
+title: Run Admob Rewarded Ads
+type: text/vnd.tiddlywiki
+
+Add this code in your JavaScript:
+
+```
+Andro.reward()
+```
