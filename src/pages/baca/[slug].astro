@@ -1,0 +1,30 @@
+---
+import type { GetStaticPaths } from "astro";
+import artikel from "../../tiddlers/published.json";
+import Head from "../../komponen/head.astro";
+
+export const getStaticPaths = () => {
+  return artikel.map((x) => ({
+    params: {
+      slug: x.slug,
+    },
+    props: {
+      title: x.title,
+      text: x.text,
+    },
+  }));
+};
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <Head />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{Astro.props.title}</title>
+  </head>
+  <body>
+    <Fragment set:html={Astro.props.text} />
+  </body>
+</html>

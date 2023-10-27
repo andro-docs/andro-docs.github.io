@@ -1,13 +1,35 @@
 ---
-
+import Head from "../komponen/head.astro";
+import artikel from "../tiddlers/published.json";
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <Head />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Andro</title>
   </head>
-  <body> </body>
+  <body>
+    <div class="hero min-h-[50vh] bg-base-200">
+      <div class="hero-content text-center">
+        <div class="max-w-md">
+          <h1 class="text-5xl font-bold">Andro</h1>
+          <p class="py-6">Convert your HTML to Android App, and Get Money 😍</p>
+        </div>
+      </div>
+    </div>
+    <div class="p-10">
+      {
+        artikel
+          .sort((a, b) => (a.title > b.title ? 1 : -1))
+          .map((x) => (
+            <a href={`/baca/${x.slug}`} class="btn mr-5 mb-5">
+              {x.title}
+            </a>
+          ))
+      }
+    </div>
+  </body>
 </html>
